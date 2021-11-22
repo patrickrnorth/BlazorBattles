@@ -1,4 +1,5 @@
 ﻿using BlazorBattles.Shared;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -17,7 +18,7 @@ namespace BlazorBattles.Client.Services
         public void AddUnit(int unitId)
         {
             var unit = Units.First(unit => unit.Id == unitId);
-            MyUnits.Add(new UserUnit { UnitId = unit.Id, HitPoints = unit.HitPoints });
+            MyUnits.Add(new UserUnit { UnitId = unit.Id, HitPoints = unit.HitPoints });           
         }
     }
 }
