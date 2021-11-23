@@ -16,6 +16,7 @@ namespace BlazorBattles.Shared
         public string Bio { get; set; }
         [Required, StringLength(100, MinimumLength = 6)]
         public string Password { get; set; }
+        //Compare will compare this string to the "Password"
         [Compare("Password", ErrorMessage ="The passwords do not match.")]
         public string ConfirmPassword { get; set; }
         public int StartUnitId { get; set; } = 1;
